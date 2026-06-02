@@ -214,7 +214,7 @@ test('capture both car number plates', async ({ page }) => {
   await page.setViewportSize({ width: 1560, height: 768 });
 
   // Step 2: Navigate to URL
-  await page.goto('https://www.bmw.in/en/index.html', {
+  await page.goto('https://www.audi.in/en/index.html', {
     waitUntil: 'domcontentloaded',
   });
 
