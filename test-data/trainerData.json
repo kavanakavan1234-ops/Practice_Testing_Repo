@@ -1,0 +1,34 @@
+{
+  "validData4": {
+    "firstName": "Kavana",
+    "lastName": "Bai",
+    "email": "kavana@test.com",
+    "country":"India",
+    "countryName": "India",
+    "phoneNumber": "9876543210",
+    "company":"Invensis Technology",
+    "jobTitle":"Engineer",
+    "trainingExpert":"PMP",
+    "courseName": ["7 QC Tools Training"],
+    "trainingExperience":"1 to 4 Years",
+    "linkedInLink":"https://www.linkedin.com/in/qa-tester-profile-xyz",
+    "chooseFile":"/home/invensis/Downloads/System .pdf",
+    "requirements": "Need training"
+  },
+  "invalidData4": {
+    "firstName": "y34",
+    "lastName": "B33",
+    "email": "ka",
+    "country":"",
+    "countryName": "",
+    "phoneNumber": "88",
+    "company":"1",
+    "jobTitle":"8",
+    "trainingExpert":"",
+    "courseName": "",
+    "trainingExperience":"",
+    "linkedInLink":"",
+    "chooseFile":"",
+    "requirements": ""
+  }
+}

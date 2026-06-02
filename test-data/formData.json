@@ -1,0 +1,20 @@
+{
+  "validData1": {
+    "firstName": "Kavana",
+    "lastName": "Bai",
+    "email": "kavana@test.com",
+    "countryName": "India",
+    "phoneNumber": "9876543210",
+    "requirements": "Need training",
+    "courseName": ["7 QC Tools Training"]
+  },
+  "invalidData1": {
+    "firstName": "",
+    "lastName": "",
+    "email": "invalid",
+    "countryName": "India",
+    "phoneNumber": "12",
+    "requirements": "",
+    "courseName": ["PMI-ACP Certification Training"]
+  }
+}
