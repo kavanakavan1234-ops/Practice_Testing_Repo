@@ -12,10 +12,7 @@ export class OCRUtil {
     );
 
     // Clean OCR result
-    const cleanedText = result.data.text
-      .replace(/[^A-Z0-9]/gi, '')
-      .toUpperCase()
-      .trim();
+    const cleanedText = result.data.text.replace(/[^A-Z0-9]/gi, '').toUpperCase().trim();
 
     return cleanedText;
   }

@@ -13,6 +13,7 @@
     "@types/node": "^25.6.0"
   },
   "dependencies": {
+    "dotenv": "^17.4.2",
     "exceljs": "^4.4.0",
     "sharp": "^0.34.5",
     "tesseract.js": "^7.0.0"

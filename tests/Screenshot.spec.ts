@@ -138,7 +138,7 @@ test('capture number plate screenshot', async ({ page }) => {
 
   
     
-/* import { test } from '@playwright/test';
+import { test } from '@playwright/test';
 
 test.setTimeout(60000);
 
@@ -202,92 +202,4 @@ test('capture 2nd car number plate screenshot', async ({ page }) => {
   });
 
   console.log('✅ 2nd car number plate "M·CI 3948" captured → screenshots/number-plate-2.png');
-}); */
-
-import { test } from '@playwright/test';
-
-test.setTimeout(60000);
-
-test('capture both car number plates', async ({ page }) => {
-
-  // Step 1: Set viewport
-  await page.setViewportSize({ width: 1560, height: 768 });
-
-  // Step 2: Navigate to URL
-  await page.goto('https://www.audi.in/en/index.html', {
-    waitUntil: 'domcontentloaded',
-  });
-
-  await page.waitForTimeout(6000);
-
-  // Dismiss popup
-  const dismissSelectors = [
-    'button:has-text("Accept")',
-    'button:has-text("Accept All")',
-    'button:has-text("I Agree")',
-    'button:has-text("Close")',
-    'button:has-text("OK")',
-  ];
-
-  for (const selector of dismissSelectors) {
-    const btn = page.locator(selector).first();
-    if (await btn.isVisible({ timeout: 1000 }).catch(() => false)) {
-      await btn.click();
-      await page.waitForTimeout(1000);
-      break;
-    }
-  }
-
-  // ─────────────────────────────────────────
-  // 1ST CAR NUMBER PLATE — "M·SE 1631"
-  // ─────────────────────────────────────────
-
-
-
-  // Step 5: Capture 1st car number plate
-  await page.screenshot({
-    path: 'screenshots/number-plate-1.png',
-    clip: {
-      x: 550,
-      y: 298,
-      width: 100,
-      height: 25,
-    },
-  });
-  console.log('✅ 1st car number plate "M·SE 1631" captured → screenshots/number-plate-1.png');
-
-  // ─────────────────────────────────────────
-  // 2ND CAR NUMBER PLATE — "M·CI 3948"
-  // ─────────────────────────────────────────
-
-  // Step 6: Scroll DOWN slowly so scroll is visible on UI
-  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  await page.waitForTimeout(1000);
-
-  for (let i = 0; i < 10; i++) {
-    await page.evaluate(() => window.scrollBy({ top: 100, behavior: 'smooth' }));
-    await page.waitForTimeout(500);
-  }
-
-  await page.waitForTimeout(3000);
-
-  // Step 7: Full screenshot to verify 2nd car
-  await page.screenshot({
-    path: 'screenshots/second-car-full.png',
-    fullPage: false,
-  });
-  console.log('📸 Second car full screenshot saved');
-
-  // Step 8: Capture 2nd car number plate
-  await page.screenshot({
-    path: 'screenshots/number-plate-2.png',
-    clip: {
-      x: 1375,
-      y: 483,
-      width: 115,
-      height: 35,
-    },
-  });
-  console.log('✅ 2nd car number plate "M·CI 3948" captured → screenshots/number-plate-2.png');
-
-});
+}); 
