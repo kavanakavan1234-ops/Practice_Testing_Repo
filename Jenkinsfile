@@ -38,6 +38,11 @@
 pipeline {
     agent any
 
+     environment {
+        BASE_URL = 'https://gorest.co.in/public/v2/'
+        TOKEN = credentials('GOREST_TOKEN')
+    }
+
     stages {
 
         stage('Checkout') {
