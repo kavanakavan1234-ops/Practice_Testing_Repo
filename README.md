@@ -1,0 +1,2 @@
+# automation_testing_playwright
+Playwright automation testing framework
