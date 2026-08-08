@@ -1,15 +1,15 @@
 export const userData = {
 
     createUser: {
-        name: "pramoda",
+        name: "shreeya ram",
         gender: "female",
-        email: `kavana${Date.now()}@gmail.com`,
+        email: `chandrakala${Date.now()}@gmail.com`,
         status: "active"
     },
 
     updateUser: {
-        name: "devi",
-        status: "inactive"
+        name: "reddy prasad",
+        status: "active"
     }
 
 };
